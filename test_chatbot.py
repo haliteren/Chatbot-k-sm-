@@ -27,7 +27,7 @@ class Test_Chatbot:
         iframe = WebDriverWait(self.driver,5).until(ec.visibility_of_element_located((By.CSS_SELECTOR,c.iframeOpen)))
         WebDriverWait(self.driver,5).until(ec.frame_to_be_available_and_switch_to_it(iframe))
         tobetoMessage = WebDriverWait(self.driver,30).until(ec.visibility_of_element_located((By.CSS_SELECTOR, c.tobetoMessage)))
-        sleep (5)
+        sleep (6)
         assert tobetoMessage.text == "Merhaba 👋"        
     def test_chatbot_icon_close(self):
         wait = WebDriverWait(self.driver, 10)
